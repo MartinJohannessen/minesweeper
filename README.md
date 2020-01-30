@@ -1,5 +1,5 @@
 # minesweeper
 
-Tools: C#, Visual Studio Code
+Tools: C#, .NET
 
 
