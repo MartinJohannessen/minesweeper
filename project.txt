@@ -1,0 +1,6 @@
+Problem: 
+Velg struktur, ka skal eg gjøre?
+
+Eg har n*n ruter. 
+Det er fem typer ruter: skjult, tom, tall, flagg eller mine.
+Aller ruter skal være skjult først, og så vise en av de fire andre ved klikk.
