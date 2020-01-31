@@ -1,0 +1,11 @@
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.exe
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.deps.json
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.runtimeconfig.json
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.runtimeconfig.dev.json
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.dll
+C:\Users\marti\batcave\minesweeper\bin\Debug\netcoreapp3.1\minesweeper.pdb
+C:\Users\marti\batcave\minesweeper\obj\Debug\netcoreapp3.1\minesweeper.csprojAssemblyReference.cache
+C:\Users\marti\batcave\minesweeper\obj\Debug\netcoreapp3.1\minesweeper.AssemblyInfoInputs.cache
+C:\Users\marti\batcave\minesweeper\obj\Debug\netcoreapp3.1\minesweeper.AssemblyInfo.cs
+C:\Users\marti\batcave\minesweeper\obj\Debug\netcoreapp3.1\minesweeper.dll
+C:\Users\marti\batcave\minesweeper\obj\Debug\netcoreapp3.1\minesweeper.pdb

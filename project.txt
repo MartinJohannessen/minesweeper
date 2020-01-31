@@ -1,6 +1,28 @@
-Problem: 
-Velg struktur, ka skal eg gjøre?
 
-Eg har n*n ruter. 
-Det er fem typer ruter: skjult, tom, tall, flagg eller mine.
-Aller ruter skal være skjult først, og så vise en av de fire andre ved klikk.
+Notat 1: 
+Ka skal eg gjøre?
+
+Tanker:
+* Eg har n*n ruter. En tabell i en tabell. Kordinatsystem. 
+* Det er fem typer ruter: skjult, tom, tall, flagg eller mine.
+
+En n*n representasjon for  miner, tall og blank, og en annen representasjon for skjult og flagg?
+En n*n(*n) representasjon som har all informasjon om en rutes tilstand på en plass?
+
+Eg må unasett lage en representasjon for miner, tall og blank. Eg begynner med en tabell av tabeller
+fylt med int 0. -10 er mine, 1 er tallet en, 2 er to, 0 er blank etc. 
+
+Eg trenger en minegenerator klasse. Den trenger parameterene antall miner, 
+x størrelse og y størrelse.
+Den tar to random numbers random x og random y og prøver å 
+sette en mine på (x,y), hvis det ikkje var en mine der fra før:- antall miner-- og lagre koordinaten.
+
+Eg trenger en tall generator klasse. Den får mine koordinater fra minegenerator klassen. 
+(x,y) er en mine.  ((x, x-1, x+1) X (y, y-1, y+1)) = 9 ruter++. 
+
+
+
+
+
+
+
