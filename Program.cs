@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace minesweeper
@@ -8,50 +9,30 @@ namespace minesweeper
     {
         static void Main(string[] args)
         {
+            int numberOfRows = 10;
+            int numberOfColumns = 10;
+            int numberOfMines = 10;
 
 
+            MineField mineField = new MineField(numberOfRows, numberOfColumns, numberOfMines);
+            mineField.PlaceMines();
+            mineField.PlaceNumbers();
 
-        }
-    }
+            int[,] board = mineField.Minefield;
 
-
-
-    public class Minefield
-    {
-        private int[,] minefield;
-
-        public Minefield(int row, int col, int mines)
-        {
-        
-            minefield = new int[row, col];
-
-            Random rnd = new Random();
-
-
-            while (mines > 0)
+            for (int i = 0; i < board.GetLength(0); i++)
             {
-                int xbomb = rnd.Next(row);
-                int ybomb = rnd.Next(col);
+                for(int j = 0; j < board.GetLength(1); j++)
+                {
+                    Console.Write(" [" + board[i, j] + "] ");
+                }
 
-
-                int valueXY = minefield[xbomb, ybomb];
-                if (valueXY < 0) { continue; }
-
-                minefield[xbomb, ybomb] = -10;
-                mines--;
+                Console.WriteLine();
             }
+          
+
+
         }
-        
-
-
-  
-
     }
-
-
-
-
-
-
 
 }
