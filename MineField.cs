@@ -22,7 +22,7 @@ namespace minesweeper
 
         public void PlaceMines()
         {
-            Minefield = new int[numberOfRows, numberOfColumns];
+            minefield = new int[numberOfRows, numberOfColumns];
 
             
            
@@ -34,10 +34,10 @@ namespace minesweeper
                 int mineRowCordinate = random.Next(numberOfRows);
                 int mineColumnCordinate = random.Next(numberOfColumns);
 
-                int cordinateValue = Minefield[mineRowCordinate, mineColumnCordinate];
+                int cordinateValue = minefield[mineRowCordinate, mineColumnCordinate];
                 if (cordinateValue < 0) { continue; }
 
-                Minefield[mineRowCordinate, mineColumnCordinate] = -10;
+                minefield[mineRowCordinate, mineColumnCordinate] = -10;
                 mines.Add(new Mine(mineRowCordinate, mineColumnCordinate));
                 mineCounter--;
 
@@ -51,15 +51,16 @@ namespace minesweeper
                 int rowCord = mine.MineRowCordinate;
                 int colCord = mine.MineColumnCordinate;
 
-                for (int i = rowCord-1; i<rowCord+1; i++)
+                for (int i = rowCord-1; i<=rowCord+1; i++)
                 {
-                    for (int j = colCord - 1; j < colCord + 1; j++)
+ 
+                    for (int j = colCord - 1; j <= colCord + 1; j++)
                     {
-                       
-                        if (i < 0 || i > numberOfRows) { continue; }
-                        if (j < 0 || j > numberOfColumns) { continue; }
-
-                        Minefield[i, j]++;
+                        if ((i>=0 && i< numberOfRows)&&(j >= 0 && j < numberOfColumns))
+                        {
+                            minefield[i, j]++;
+                        }
+                        
                     }
                 }
             }
