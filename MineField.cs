@@ -12,6 +12,7 @@ namespace minesweeper
         // A representation of the underying board with mines = <0, clear = 0, number = number>0.
         public int[,] Board { get; set; }
 
+        // Initialize a minefield object using parameters.
         public MineField(int numberOfRows, int numberOfColumns, int numberOfMines)
         {
             this.numberOfRows = numberOfRows;
@@ -20,6 +21,7 @@ namespace minesweeper
         }
 
 
+        // Place mines on the empty board.
         public void PlaceMines()
         {
             Board = new int[numberOfRows, numberOfColumns];
@@ -71,8 +73,23 @@ namespace minesweeper
                 }
             }
         }
-        
 
-        
+        // Print a representation of the board.
+        public void PrintBoard()
+        {
+            for (int i = 0; i < Board.GetLength(0); i++)
+            {
+                for (int j = 0; j < Board.GetLength(1); j++)
+                {
+                    Console.Write($"[{Board[i, j],3}]");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+
+
     }
 }
