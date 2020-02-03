@@ -1,4 +1,19 @@
 
+Notat 2:
+Eg har laget to representasjoner av minesweeper spillet. No trenger eg GUI.
+Eg bruker .NET core. Core har nylig begynt å supporte GUI. Men dette ligner veldig
+på arbeid som eg har gjort med Java fx, så kanskje eg skal gå for en nett applikasjon,
+noe .NET core også støtter flere måter å gjøre. 
+
+Eg skal jobbe med frontend prosjektet mitt først og så se ka eg har lyst til når eg
+har satt meg inn i det.
+
+I mens kan eg holde dette prosjektet i bakhodet for å legge merke til
+hvordan jeg må tilpasse programmet. Kanskje å representere spillet som 
+en Board[Tile,Tile] er helt feil?
+
+
+
 Notat 1: 
 Ka skal eg gjøre?
 
