@@ -11,6 +11,8 @@ namespace minesweeper
         private List<Mine> mines = new List<Mine>();
         // A representation of the underying board with mines = <0, clear = 0, number = number>0.
         public int[,] Board { get; set; }
+        // A representation of the full board.
+        public Tile[,] HiddenBoard { get; set; }
 
         // Initialize a minefield object using parameters.
         public MineField(int numberOfRows, int numberOfColumns, int numberOfMines)
@@ -18,6 +20,33 @@ namespace minesweeper
             this.numberOfRows = numberOfRows;
             this.numberOfColumns = numberOfColumns;
             this.numberOfMines = numberOfMines;
+
+            PlaceMines();
+            PlaceNumbers();
+            HideBoard();
+        }
+
+        // Creates a full representation of the game tiles and what they should display initially.
+        private void HideBoard()
+        {
+            HiddenBoard = new Tile[numberOfRows, numberOfColumns];
+
+            for (int i = 0; i < Board.GetLength(0); i++)
+            {
+                for (int j = 0; j < Board.GetLength(1); j++)
+                {
+                    int tileValue = Board[i, j];
+                    int row = i;
+                    int col = j;
+                    bool hidden = true;
+                    bool flag = false;
+
+                    HiddenBoard[i, j] = new Tile(flag, hidden, tileValue, row, col);
+
+                }
+
+            }
+
         }
 
 
@@ -53,26 +82,27 @@ namespace minesweeper
          */
         public void PlaceNumbers()
         {
-            foreach(Mine mine in mines)
+            foreach (Mine mine in mines)
             {
                 int rowCord = mine.MineRowCordinate;
                 int colCord = mine.MineColumnCordinate;
 
-                for (int i = rowCord-1; i<=rowCord+1; i++)
+                for (int i = rowCord - 1; i <= rowCord + 1; i++)
                 {
- 
+
                     for (int j = colCord - 1; j <= colCord + 1; j++)
                     {
                         // Check if index is inside the board.
-                        if ((i>=0 && i< numberOfRows)&&(j >= 0 && j < numberOfColumns))
+                        if ((i >= 0 && i < numberOfRows) && (j >= 0 && j < numberOfColumns))
                         {
                             Board[i, j]++;
                         }
-                        
+
                     }
                 }
             }
         }
+
 
         // Print a representation of the board.
         public void PrintBoard()
@@ -89,7 +119,6 @@ namespace minesweeper
             Console.WriteLine();
         }
 
-
-
+   
     }
 }

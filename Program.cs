@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-
-namespace minesweeper
+﻿namespace minesweeper
 {
 
     class Program
@@ -15,16 +11,18 @@ namespace minesweeper
 
 
             MineField mineField = new MineField(numberOfRows, numberOfColumns, numberOfMines);
-            mineField.PlaceMines();
-            mineField.PlaceNumbers();
-            mineField.PrintBoard();
+
+            Tile[,] gameRepresentation = mineField.HiddenBoard;
+
+
+
+
+
 
 
 
         }
 
-
     }
 }
 
-        
