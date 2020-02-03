@@ -7,7 +7,7 @@ namespace minesweeper
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int numberOfRows = 10;
             int numberOfColumns = 10;
@@ -17,10 +17,12 @@ namespace minesweeper
             MineField mineField = new MineField(numberOfRows, numberOfColumns, numberOfMines);
             mineField.PlaceMines();
             mineField.PlaceNumbers();
-            PrintBoard(mineField.Minefield);
+
+            PrintBoard(mineField.Board);
 
         }
 
+        // Print a representation of the board.
         private static void PrintBoard(int[,] board)
         {
             for (int i = 0; i < board.GetLength(0); i++)
