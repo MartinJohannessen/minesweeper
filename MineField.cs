@@ -20,7 +20,6 @@ namespace minesweeper
         }
 
 
-
         public void PlaceMines()
         {
             Board = new int[numberOfRows, numberOfColumns];

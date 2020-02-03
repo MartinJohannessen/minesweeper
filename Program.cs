@@ -18,7 +18,12 @@ namespace minesweeper
             mineField.PlaceMines();
             mineField.PlaceNumbers();
 
+
+
             PrintBoard(mineField.Board);
+
+
+
 
         }
 
@@ -29,14 +34,12 @@ namespace minesweeper
             {
                 for (int j = 0; j < board.GetLength(1); j++)
                 {
-
-                    Console.Write(" [" + board[i, j] + "] ");
-                  
+                    Console.Write($"[{board[i, j],2}]");
                 }
-
                 Console.WriteLine();
             }
         }
     }
-
 }
+
+        
